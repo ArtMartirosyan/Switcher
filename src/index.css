@@ -1,13 +1,89 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.switcher {
+  height: var(--v-height);
+  border-radius: 30%;
+  width: var(--v-width);
+  background-color: rgb(0, 132, 255);
+  border: 0.5px solid black;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.switcherOff {
+  height: var(--v-height);
+  border-radius: 30%;
+  width: var(--v-width);
+  background-color: rgb(116, 123, 129);
+  border: 0.5px solid black;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.circle {
+  margin-top: 2px;
+  float: right;
+  height: var(--v-heightBall);
+  border-radius: 50%;
+  width: var(--v-widthBall);
+  background-color: white;
+}
+.circleOff {
+  margin-top: 2px;
+  height: var(--v-heightBall);
+  border-radius: 50%;
+  width: var(--v-widthBall);
+  background-color: white;
+}
+
+.disabled {
+  opacity: 0.5;
+  background: rgb(204, 204, 204);
+  pointer-events: none;
+}
+
+.label-Left {
+  display: flex;
+  flex-direction: row;
+}
+
+.label-Right {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.label-Top {
+  display: flex;
+  flex-direction: column;
+}
+.label-Bottom {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.table-cell {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* my Tab classes !!!!!!!!!!!!!! */
+
+.activeTab {
+  border: 1px solid blue;
+  margin: 10px 3px;
+  cursor: pointer;
+}
+.passiveTab {
+  cursor: not-allowed;
+  background-color: rgb(229, 229, 229);
+  border-color: rgb(143, 38, 38);
 }

@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+// import Switcher from "./components/Switcher";
+// import Currency from "./components/Currency";
+// import Testing from "./components/Testing";
+// import Testing_2 from "./components/Testing_2";
+import TabWizard from "./components/TabWizard";
+import TabConfig from "./config/TabConfig";
 
 function App() {
+  const [isImgCntVisible, setIsImgCntVisible] = useState(false);
+  const [switcherExtValue, setSwitcherExtValue] = useState(false);
+
+  const switcherChangeHandler = (value) => {
+    setIsImgCntVisible(value);
+  };
+
+  // setTimeout(() => {
+  //   setSwitcherExtValue(true);
+  // }, 5000);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <TabWizard tabs={TabConfig} />
+      {/* <Currency /> */}
+      {/* <Testing /> */}
+      {/* <Testing_2 /> */}
+      {/* {isImgCntVisible && <div>image</div>}
+
+      <Switcher
+        defaultValue={false}
+        disabled={false}
+        value={switcherExtValue}
+        onChange={switcherChangeHandler}
+        onText="exampleOn"
+        offText="exampleOff"
+        labelPosition="right"
+        size="small"
+      /> */}
     </div>
   );
 }
